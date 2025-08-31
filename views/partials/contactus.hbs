@@ -1,0 +1,166 @@
+<!-- START CONTACT PAGE SECTION -->
+<section id="contcat" class="section-padding">
+   <div class="auto-container">
+      <div class="row">
+         <div class="col-lg-5 col-md-5 col-12 mb-lg-0 mb-md-0 mb-5">
+            <div class="address-box-wrap bg-gray shadow-sm p-lg-5 p-md-3 p-3">
+               <div class="address-box-sin mb-4">
+                  <div class="address-box-icon">
+                     <i class="icofont-location-pin"></i>
+                  </div>
+                  <div class="address-box-des">
+                     <h4>Address</h4>
+                     <a href="{{siteMap1}}" target="_blank">{{siteAddress}}</a>
+                  </div>
+               </div>
+               <!-- end single address box -->
+               <div class="address-box-sin mb-4">
+                  <div class="address-box-icon">
+                     <i class="icofont-envelope-open"></i>
+                  </div>
+                  <div class="address-box-des">
+                     <h4>Send Email</h4>
+                     <a href="mailto:{{siteEmail}}" target="_blank">{{siteEmail}}</a>
+                  </div>
+               </div>
+               <!-- end single address box -->
+               <div class="address-box-sin mb-4">
+                  <div class="address-box-icon">
+                     <i class="icofont-phone"></i>
+                  </div>
+                  <div class="address-box-des">
+                     <h4>Phone</h4>
+                     <a href="tel:{{sitePhone}}" target="_blank">{{sitePhone}}</a>
+                  </div>
+               </div>
+               <!-- end single address box -->
+               <div class="address-box-sin mb-4">
+                  <div class="address-box-icon">
+                     <i class="icofont-whatsapp"></i>
+                  </div>
+                  <div class="address-box-des">
+                     <h4>Whatsapp</h4>
+                     <a href="https://wa.me/{{siteWhatsApp}}" target="_blank">{{siteWhatsApp}}</a>
+                  </div>
+               </div>
+               <!-- end single address box -->
+               <div class="address-box-sin">
+                  <div class="address-box-icon">
+                     <i class="icofont-eye"></i>
+                  </div>
+                  <div class="address-box-des">
+                     <h4>Opening Time</h4>
+                     <p>Mon - Sat: 9 AM - 5 PM <br> Sun: Close</p>
+                  </div>
+               </div>
+               <!-- end single address box -->
+            </div>
+         </div>
+         <!-- end col -->
+         <div class="col-lg-7 col-md-7 col-12 pl-lg-5 pl-md-3 pl-0">
+            <div class="contact-heading mb-5">
+               <h2>Do You Have Any Query ? Write to Us</h2>
+            </div>
+               {{#if show}}
+                     <p class="text-center text-success my-3">Thanks To Share Your Query With Us. Our Team Will Contact You Soon. </p>
+               {{/if}}
+            <div class="contact-form-wrap">
+               <form id="main-form" class="contact-form form" method="POST" action="/contactus">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-user"></i></span>
+                           <input type="text" class="form-control" name="name" placeholder="John" required>
+                           <label for="name">First Name*</label>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-envelope"></i></span>
+                           <input type="email" class="form-control" name="email" placeholder="example@xyz.com" required>
+                           <label for="email">Email*</label>
+                        </div>
+                     </div>
+
+
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-ui-dial-phone"></i></span>
+                           <input type="text" class="form-control" name="phone" placeholder="xxx-xxx-xxxx" required>
+                           <label for="number">Contact Number*</label>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-at"></i></span>
+                           <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                           <label for="subject">Subject*</label>
+                        </div>
+                     </div>
+
+                     <div class="col-12">
+                        <div class="form-group form-message">
+                           <span class="form-icon"><i class="icofont-chat"></i></span>
+                           <textarea class="form-control"rows="5" name="message" placeholder="Message" required></textarea>
+                           <label for="message">Message</label>
+                        </div>
+                     </div>
+                    <div class="col-12">
+                     <button type="submit"class="btn btn-primary w-100">Submit</button>
+                    </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- end col -->
+      </div>
+   </div>
+</section>
+<!-- END CONTACT PAGE SECTION -->
+
+<!-- START MAP SECTION -->
+<div class="section-padding py-0">
+   <!-- start google map -->
+   <div class="gmap_canvas">
+      <iframe id="gmap_canvas" src="{{siteMap2}}"></iframe>
+   </div>
+   <!-- end google map -->
+</div>
+<!-- END MAP SECTION -->
+
+<!-- START CLIENT LOGO SECTION -->
+{{!-- <div id="clients" class="client-padding bg-gray">
+   <div class="container">
+      <div class="row mb-lg-0 mb-md-0 mb-5">
+         <div class="col">
+            <div class="clients-slides owl-carousel owl-theme">
+               <div class="single-client-item">
+                  <a href="#"><img class="img-fluid" alt="" src="assets/img/clients/1.png"></a>
+               </div>
+               <!-- end single item -->
+               <div class="single-client-item">
+                  <a href="#"><img class="img-fluid" alt="" src="assets/img/clients/2.png"></a>
+               </div>
+               <!-- end single item -->
+               <div class="single-client-item">
+                  <a href="#"><img class="img-fluid" alt="" src="assets/img/clients/3.png"></a>
+               </div>
+               <!-- end single item -->
+               <div class="single-client-item">
+                  <a href="#"><img class="img-fluid" alt="" src="assets/img/clients/4.png"></a>
+               </div>
+               <!-- end single item -->
+               <div class="single-client-item">
+                  <a href="#"><img class="img-fluid" alt="" src="assets/img/clients/5.png"></a>
+               </div>
+               <!-- end single item -->
+               <div class="single-client-item">
+                  <a href="#"><img class="img-fluid" alt="" src="assets/img/clients/6.png"></a>
+               </div>
+               <!-- end single item -->
+            </div>
+         </div>
+      </div>
+   </div>
+</div> --}}
+<!-- START CLIENT LOGO SECTION -->

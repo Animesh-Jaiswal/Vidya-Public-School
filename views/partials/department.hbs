@@ -1,0 +1,38 @@
+  <!-- START SINGLE SERVICE PAGE SECTION -->
+      <section id="singleservice" class="section-padding">
+         <div class="auto-container">
+            <div class="row mb-lg-5 mb-0">
+               <div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-5 pr-lg-5 pr-md-5 pr-0">
+                  <div class="sidebar-widget ser_wid service-links mb-5">
+                     <div class="sidebar-widget-inner">
+                        <div class="sidebar-widget-title">
+                           <h5>Department</h5>
+                        </div>
+                        <ul>
+                           {{#each department}}
+                           <li><a href="/department?_id={{_id}}">{{{icon}}}</i>{{title}}</a></li>  
+                          {{/each}}
+                        </ul>                                   
+                     </div>
+                  </div>
+                 
+               </div>
+               <!-- end col -->
+               <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                  <h3 class="text-center p-2">{{data.title}}</h3>
+                  <img src="{{data.pic}}"alt=""style="height:400px;width:100%"/>
+   				   					</div>
+   					<!-- end service slides -->
+   					<div class="service-des mt-4">
+                     <p><i>{{data.shortDescription}}</i></p>
+                   <p class="mt-3">{{{data.longDescription}}}</p>
+
+   					</div>
+               </div>
+               <!-- end col -->
+            </div>
+         </div>
+      </section>
+      <!-- END SINGLE SERVICE PAGE SECTION -->
+
+      {{>enquiryButton}}

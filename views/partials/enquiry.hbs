@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-11 m-auto">
+            <div class="text-center mt-5">
+               <h2>For Addmission Enquiry Write To Us</h2>
+            </div>
+               {{#if show}}
+                     <p class="text-center text-success my-3">Thanks For Enquiry. Our Team Will Contact You Soon. </p>
+               {{/if}}
+            <div class="contact-form-wrap">
+               <form id="main-form" class="contact-form form" method="POST" action="/enquiry">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-user"></i></span>
+                           <input type="text" class="form-control" name="name" placeholder="John" required>
+                           <label for="name">First Name*</label>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-envelope"></i></span>
+                           <input type="email" class="form-control" name="email" placeholder="example@xyz.com" required>
+                           <label for="email">Email*</label>
+                        </div>
+                     </div>
+
+
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-ui-dial-phone"></i></span>
+                           <input type="text" class="form-control" name="phone" placeholder="xxx-xxx-xxxx" required>
+                           <label for="number">Contact Number*</label>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <div class="form-group">
+                           <span class="form-icon"><i class="icofont-at"></i></span>
+                           <input type="text" class="form-control" name="subject" placeholder="Enquiry For?"required>
+                           <label for="subject">Subject*</label>
+                        </div>
+                     </div>
+
+                     <div class="col-12">
+                        <div class="form-group form-message">
+                           <span class="form-icon"><i class="icofont-chat"></i></span>
+                           <textarea class="form-control"rows="5" name="message" placeholder="Message(Optional)"></textarea>
+                           <label for="message">Message</label>
+                        </div>
+                     </div>
+                    <div class="col-12">
+                     <button type="submit"class="btn btn-primary w-100">Submit</button>
+                    </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+  </div>
+</div>

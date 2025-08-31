@@ -1,0 +1,82 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary">Update User Record <a href="/admin/user"><i
+                            class="bi bi-arrow-left float-end text-light"></i></a></h5>
+                <form action="/admin/user/update/{{data.id}}" method="post">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Name*</label>
+                            <input type="text" name="name" placeholder="Full Name" value="{{data.name}}"
+                                class="form-control {{#if errorMessage.name}}border-danger{{/if}}">
+                            {{#if errorMessage.name}}
+                            <p class="text-danger">{{errorMessage.name}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Phone*</label>
+                            <input type="text" name="phone" placeholder="Phone Number" value="{{data.phone}}"
+                                class="form-control {{#if errorMessage.phone}}border-danger{{/if}}">
+                            {{#if errorMessage.phone}}
+                            <p class="text-danger">{{errorMessage.phone}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>UserName*</label>
+                            <input type="text" name="username" placeholder="Username" value="{{data.username}}"
+                                class="form-control {{#if errorMessage.username}}border-danger{{/if}}">
+                            {{#if errorMessage.username}}
+                            <p class="text-danger">{{errorMessage.username}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Email*</label>
+                            <input type="email" name="email" placeholder="Email Id" value="{{data.email}}"
+                                class="form-control {{#if errorMessage.email}}border-danger{{/if}}">
+                            {{#if errorMessage.email}}
+                            <p class="text-danger">{{errorMessage.email}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Role*</label>
+                            <select class="form-control" name="role">
+                                <option value="Admin" {{isActiveFormHelper data.role "Admin" }}>Admin</option>
+                                <option value="Super Admin" {{isActiveFormHelper data.role "Super Admin" }}>Super Admin
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Active*</label>
+                            <select class="form-control" name="active">
+                                <option value="1" {{isActiveFormHelper data.active "1" }}>Yes</option>
+                                <option value="0" {{isActiveFormHelper data.active "0" }}>No</option>
+
+                            </select>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <button type="submit" class="btn btn-primary w-100">Update</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{>footer}}

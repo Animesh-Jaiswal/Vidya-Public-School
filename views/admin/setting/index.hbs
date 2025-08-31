@@ -1,0 +1,117 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary text-light">Settings</h5>
+                <form action="/admin/setting/store" method="post">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label>Google Map1</label>
+                            <input type="url" name="map1" value="{{data.map1}}" class="form-control"
+                                placeholder="Google Map1 Address Button">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Google Map2(to Display Map in contact Us Page)</label>
+                            <input type="url" name="map2" value="{{data.map2}}" class="form-control"
+                                placeholder="Google Map for contactUs page">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Address</label>
+                            <textarea name="address" value="{{data.address}}"
+                                class="form-control">{{data.address}}</textarea>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>Email</label>
+                            <input type="email" name="email" value="{{data.email}}" placeholder="Email"
+                                class="form-control">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label>Phone</label>
+                            <input type="text" name="phone" value="{{data.phone}}" placeholder="Phone Number"
+                                class="form-control">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label>Whatsapp</label>
+                            <input type="whatsapp" name="whatsapp" value="{{data.whatsapp}}"
+                                placeholder="Whatsapp Number" class="form-control">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>About Us Video URL</label>
+                            <input type="url" name="aboutUsVideo" value="{{data.aboutUsVideo}}" class="form-control"
+                                placeholder="About Us Video URL">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>Teacher Counter</label>
+                            <input type="number" name="teacherCounter" value="{{data.teacherCounter}}"
+                                placeholder="Teacher Counter" class="form-control">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>Student Counter</label>
+                            <input type="number" name="studentCounter" value="{{data.studentCounter}}"
+                                placeholder="Student Counter" class="form-control">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>Event Counter</label>
+                            <input type="number" name="eventCounter" value="{{data.eventCounter}}"
+                                placeholder="Event Counter" class="form-control">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>Parent Counter</label>
+                            <input type="number" name="parentCounter" value="{{data.parentCounter}}"
+                                placeholder="Parent Counter" class="form-control">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Facebook</label>
+                            <input type="url" name="facebook" value="{{data.facebook}}" class="form-control"
+                                placeholder="Facebook Profile Page URL">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Linkedin</label>
+                            <input type="url" name="linkedin" value="{{data.linkedin}}" class="form-control"
+                                placeholder="Linkedin Profile Page URL">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label>Instagram</label>
+                            <input type="url" name="instagram" value="{{data.instagram}}" class="form-control"
+                                placeholder="Instagram Profile Page URL">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Twitter</label>
+                            <input type="url" name="twitter" value="{{data.twitter}}" class="form-control"
+                                placeholder="Twitter Profile Page URL">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label>Youtube</label>
+                            <input type="url" name="youtube" value="{{data.youtube}}" class="form-control"
+                                placeholder="Youtube Profile Page URL">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer}}

@@ -1,0 +1,59 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary text-light">Department <a href="/admin/department/create"><i
+                            class="fa fa-plus float-end text-light"></i></a></h5>
+                <div class="table-responsive">
+                    <table id="dataTable"class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Title</th>
+                                 <th>Pic</th>
+                                 <th>sort Order</th>
+                                <th>Icon</th>
+                                <th>Active</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each data}}
+                            <tr>
+                                <td>{{_id}}</td>
+                                <td>{{title}}</td>
+
+                                 <td>
+                                    <a href="/{{pic}}" target="_blank">
+                                        <img src="/{{pic}}" height="80px" width="100px" alt="">
+                                    </a>
+                                </td>
+                                <td>{{sortOrder}}</td>
+                                <td>{{{icon}}}</td>
+                                <td>{{isActive active}}</td>
+                                <td><a href="/admin/department/show/{{_id}}" class="btn btn-primary"><i
+                                            class="fa fa-eye"></i></a></td>
+                                <td><a href="/admin/department/edit/{{_id}}" class="btn btn-secondary"><i
+                                            class="fa fa-edit"></i></a></td>
+                                <td><a href="/admin/department/delete/{{_id}}" class="btn btn-danger"><i
+                                            class="fa fa-trash"></i></a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer}}

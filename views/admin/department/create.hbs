@@ -1,0 +1,88 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary">Department <a href="/admin/department"><i
+                            class="bi bi-arrow-left float-end text-light"></i></a></h5>
+                <form action="/admin/department/store" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-9 mb-3">
+                            <label>Title*</label>
+                            <input type="text" name="title" placeholder="Department Title" value="{{data.title}}"
+                                class="form-control {{#if errorMessage.title}}border-danger{{/if}}">
+                            {{#if errorMessage.title}}
+                            <p class="text-danger">{{errorMessage.title}}</p>
+                            {{/if}}
+                        </div>
+
+                         <div class="col-md-3 mb-3">
+                            <lable>Sort Order*</lable>
+                            <input type="number" name="sortOrder" class="form-control"
+                                value="{{#if data.sortOrder}}{{data.sortOrder}}{{else}}10{{/if}}">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Short-Description*</label>
+                            <textarea name="shortDescription" rows="4" placeholder="Short Description"
+                                class="form-control {{#if errorMessage.shortDescription}}border-danger{{/if}}">{{data.shortDescription}}</textarea>
+                            {{#if errorMessage.shortDescription}}
+                            <p class="text-danger">{{errorMessage.shortDescription}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>Long-Description*</label>
+                            <textarea id="texteditor1" name="longDescription" rows="4" placeholder="long Description"
+                                class="form-control {{#if errorMessage.longDescription}}border-danger{{/if}}">{{data.longDescription}}</textarea>
+                            {{#if errorMessage.longDescription}}
+                            <p class="text-danger">{{errorMessage.longDescription}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <lable>Pic*</lable>
+                            <input type="file" name="pic"
+                                class="form-control {{#if errorMessage.pic}}border-danger{{/if}}">
+                            {{#if errorMessage.pic}}
+                            <p class="text-danger">{{errorMessage.pic}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <lable>Icon*</lable>
+                            <input type="text" name="icon" placeholder="Icon Tag..."
+                                class="form-control {{#if errorMessage.icon}}border-danger{{/if}}">
+                            {{#if errorMessage.icon}}
+                            <p class="text-danger">{{errorMessage.icon}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label>Active*</label>
+                            <select class="form-control" name="active">
+                                <option value="1" {{isActiveFormHelper data.active "1" }}>Yes</option>
+                                <option value="0" {{isActiveFormHelper data.active "0" }}>No</option>
+
+                            </select>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <button type="submit" class="btn btn-primary w-100">Create</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{>footer}}

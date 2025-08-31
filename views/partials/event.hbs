@@ -1,0 +1,56 @@
+<section id="services" class="section-padding">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-12 mx-auto text-center">
+                <div class="section-title">
+                    <h6 class="theme-color">Think Out Side The Box</h6>
+                    <h2>Why Choose {{siteName}}</h2>
+                    <p>Stay updated with our exciting school events, workshops, and celebrations that enrich student life, foster creativity, and build a strong sense of community and learning.</p>
+                </div>
+            </div>
+        </div>
+        <!-- end section title -->
+        <div class="row">
+            {{#each event}}
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 text-center mb-lg-0 mb-md-0 mb-sm-4 mb-4">
+                <div class="single-service-item shadow bg-white">
+                    <img src="{{pic}}"alt=""style="height:200px;width:100%"/>
+                   
+                    <div class="service-item-text-holder">
+                        <h5 class="p-2">{{title}}</h5>
+                        <p>{{OnlyDateHelper date}}</p>
+                        <p class="text-justify">{{shortDescription}}</p>
+                        <button type="button" class="btn btn-primary rounded-pill" data-toggle="modal"
+                            data-target="#feature{{_id}}">
+                            Read More
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="feature{{_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            {{{longDescription}}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+    <!--- END CONTAINER -->
+</section>

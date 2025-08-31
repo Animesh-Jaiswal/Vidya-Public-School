@@ -1,0 +1,78 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary text-light">Department <a href="/admin/department"><i
+                            class="bi bi-arrow-left float-end text-light"></i></a></h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Id</th>
+                                <td>{{data._id}}</td>
+                            </tr>
+                            <tr>
+                                <th>Title</th>
+                                <td>{{data.title}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Pic</th>
+                                <td>
+                                    <a href="/{{data.pic}}">
+                                        <img src="/{{data.pic}}" height="200px" width="500px" alt="" /></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Short Description</th>
+                                <td>{{data.shortDescription}}</td>
+                            </tr>
+                            <tr>
+                                <th>long Description</th>
+                                <td>{{{data.longDescription}}}</td>
+                            </tr>
+                            <tr>
+                                <th>Icon</th>
+                                <td>{{{data.icon}}} </td>
+                            </tr>
+                            <tr>
+                                <th>Active</th>
+                                <td>{{isActive data.active}}</td>
+                            </tr>
+                            <tr>
+                                <th>CreatedBy / Create At</th>
+                                <td>{{data.createBy}}/{{dateHelper data.createdAt}}</td>
+                            </tr>
+                            <tr>
+                                <th>Updated By</th>
+                                <td>
+                                    <ul>
+                                        {{#each data.updateBy}}
+                                        <li>{{name}} - {{dateHelper date}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="/admin/department/edit/{{data._id}}" class="btn btn-primary w-100">Update
+                                        Record</a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer}}

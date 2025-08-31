@@ -1,0 +1,81 @@
+<section id="pabout" class="about-wel-padding">
+  <div class="auto-container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-lg-0 mb-5">
+        <img class="img-fluid h-100 w-100" src="assets/img/bg/about-img.jpg" alt="" />
+      </div>
+      <!-- end col -->
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="welcome-section-title">
+          <h6 class="theme-color">Welcome To Our School</h6>
+          <h2>{{siteName}}</h2>
+          <p class="text-justify">{{siteNameLogo}} is dedicated to providing quality education that nurtures young minds, builds strong character, and prepares students for a successful future. Established with a vision to create a learning environment that balances academic excellence with holistic development, the school focuses on empowering students with knowledge, skills, and values.
+
+At {{siteNameLogo}}, we believe every child is unique and has the potential to achieve greatness. Our experienced faculty, innovative teaching methods, and modern infrastructure ensure that students not only excel in academics but also grow in confidence, creativity, and leadership. Alongside studies, we emphasize sports, cultural activities, and life skills to shape well-rounded individuals.
+
+With a mission to inspire lifelong learning and instill moral responsibility, {{siteNameLogo}} continues to be a place where education goes beyond textbooks, shaping responsible citizens for tomorrow.</p>
+        </div>
+        <div class="welcome-des wow fadeInUp">
+          <div class="col-lg-8 col-md-7 col-12 pl-0 mt-4">
+            <div class="row">
+              {{#if (showButton currentUrl '/about')}}
+              <div class="col-lg-6 mb-md-3 mb-3">
+                <div class="welcome-btn">
+                  <a href="/about" class="welcome-into-btn">Learn More <i class="icofont icofont-caret-right"></i></a>
+                </div>
+              </div>
+              {{/if}}
+              <div class="col-lg-6">
+                <a class="welcome-video venobox" data-autoplay="true" data-vbtype="video"
+                  data-title="Introduction Video" data-gall="videoa" href="https://www.youtube.com/embed/Oq61TxejZ5g">
+                  <div class="welcome-video-icon">
+                    <i class="icofont-youtube-play"></i>
+                  </div>
+                  <div class="welcome-video-des">
+                    <h5>Watch Video</h5>
+                    <p>About Us</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end col -->
+    </div>
+  </div>
+</section>
+
+<!-- START WELCOME SECTION -->
+<section id="habout" class="welcome-section-padding">
+  <div class="auto-container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-lg-0 mb-5">
+        <div class="about-wel-des">
+          <h6 class="theme-color"><i class="icofont-plus"></i>{{siteName}}</h6>
+          <h2 class="my-4">Invest in Your Student’s Future</h2>
+          <p class="text-justify">At {{siteName}}, we believe education is the best investment for a child’s future. Our goal is to provide students with strong academic foundations, essential life skills, and moral values that prepare them for success in higher education and beyond. With modern facilities, experienced faculty, and a nurturing environment, we shape confident learners and responsible citizens. Choosing {{siteNameLogo}} means securing a brighter, well-rounded future for your child.</p>
+          {{#if (showButton currentUrl '/about')}}
+          <div class="about-btn wow fadeInUp">
+            <a href="/about" class="about-us-into-btn-2 mr-2">Read More</a>
+            {{!-- <a href="#" class="about-us-into-btn-icon"><i class="icofont icofont-caret-right"></i></a> --}}
+          </div>
+          {{/if}}
+        </div>
+      </div>
+      <!-- end col -->
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="about-wel-img-sec img-overlay">
+          <a class="venobox" data-autoplay="true" data-vbtype="video" data-title="Intro Video" data-gall="videoh"
+            href="{{fact.aboutUsVideo}}"><i class="icofont-play-alt-2"></i></a>
+          <div class="img-wrap">
+            <img class="img-fluid" src="assets/img/bg/slide1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- end col -->
+    </div>
+  </div>
+  <!--- END CONTAINER -->
+</section>
+<!-- END WELCOME SECTION -->

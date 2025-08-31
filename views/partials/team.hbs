@@ -1,0 +1,46 @@
+ <!-- START TEAM SECTION -->
+      <section id="team" class="section-padding">
+         <div class="auto-container">
+            <div class="row">
+               <div class="col-lg-7 col-md-7 col-12 mx-auto text-center">
+                  <div class="section-title">
+                     <h6 class="theme-color">We love what we do</h6>
+                     <h2>Our Experts Teachers</h2>
+                     <p>Our teachers are highly experienced, dedicated, and passionate professionals who focus on practical learning, skill development, and guiding each student toward a successful and confident future.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- end section title -->
+            <div class="row mb-5">
+               <div class="col">
+                  <div class="team-slides owl-carousel owl-theme">
+                   {{#each team}}
+                     <div class="single-team-wrapper">
+                        <div class="single-team-member">
+                           <img class="img-fluid" src="/{{pic}}" alt="">
+                           <div class="single-team-member-content">
+                              <ul class="single-team-member-social">
+                                 <li><a href="{{facebook}}"target="_blank"><i class="icofont-facebook"></i></a></li>
+                                 <li><a href="{{twitter}}"target="_blank"><i class="icofont-twitter"></i></a></li>
+                                 <li><a href="{{linkedin}}"target="_blank"><i class="icofont-linkedin"></i></a></li>
+                                 <li><a href="{{youtube}}"target="_blank"><i class="icofont-youtube"></i></a></li>
+                                  <li><a href="{{instagram}}"target="_blank"><i class="icofont-instagram"></i></a></li>
+
+                              </ul>
+                              <div class="single-team-member-text">
+                                 <h4>{{name}}</h4>
+                                 <p>{{designation}}</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                    
+                     <!-- End single team item -->
+                     {{/each}}
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--- END CONTAINER -->
+      </section>
+      <!-- END TEAM SECTION -->

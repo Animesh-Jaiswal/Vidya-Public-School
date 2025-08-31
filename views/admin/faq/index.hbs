@@ -1,0 +1,54 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary text-light">Faq <a href="/admin/faq/create"><i
+                            class="fa fa-plus float-end text-light"></i></a></h5>
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Question</th>
+                                <th>Answer</th>
+                                <th>Sort Order</th>
+                                <th>Active</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each data}}
+                            <tr>
+                                <td>{{_id}}</td>
+                                <td>{{question}}</td>
+                                <td>
+                                    <div class="faq-answer">
+                                        {{answer}}
+                                    </div>
+                                </td>
+                                <td>{{sortOrder}}</td>
+                                <td>{{isActive active}}</td>
+
+                                <td><a href="/admin/faq/edit/{{_id}}" class="btn btn-secondary"><i
+                                            class="fa fa-edit"></i></a></td>
+                                <td><a href="/admin/faq/delete/{{_id}}" class="btn btn-danger"><i
+                                            class="fa fa-trash"></i></a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer}}

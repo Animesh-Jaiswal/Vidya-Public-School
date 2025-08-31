@@ -1,0 +1,107 @@
+{{>header}}
+{{>navbar}}
+
+{{>breadcrum}}
+
+<section id="admin" class="section-padding">
+    <div class="container-fluid my-3">
+        <div class="row mx-3">
+            <div class="col-md-3 mb-3">
+                {{>sidebar}}
+            </div>
+            <div class="col-md-9 mb-3">
+                <h5 class="text-center p-2 bg-primary">Team <a href="/admin/team"><i
+                            class="bi bi-arrow-left float-end text-light"></i></a></h5>
+                <form action="/admin/team/store" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Name*</label>
+                            <input type="text" name="name" placeholder="Team Member Name" value="{{data.name}}"
+                                class="form-control {{#if errorMessage.name}}border-danger{{/if}}">
+                            {{#if errorMessage.name}}
+                            <p class="text-danger">{{errorMessage.name}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Designation*</label>
+                            <input type="text" name="designation" placeholder="Team Member Designation"
+                                value="{{data.designation}}"
+                                class="form-control {{#if errorMessage.designation}}border-danger{{/if}}">
+                            {{#if errorMessage.designation}}
+                            <p class="text-danger">{{errorMessage.designation}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <lable>Pic*</lable>
+                            <input type="file" name="pic"
+                                class="form-control {{#if errorMessage.pic}}border-danger{{/if}}">
+                            {{#if errorMessage.pic}}
+                            <p class="text-danger">{{errorMessage.pic}}</p>
+                            {{/if}}
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <lable>Sort Order*</lable>
+                            <input type="number" name="sortOrder" class="form-control"
+                                value="{{#if data.sortOrder}}{{data.sortOrder}}{{else}}10{{/if}}">
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label>Active*</label>
+                            <select class="form-control" name="active">
+                                <option value="1" {{isActiveFormHelper data.active "1" }}>Yes</option>
+                                <option value="0" {{isActiveFormHelper data.active "0" }}>No</option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <lable>Facebook*</lable>
+                            <input type="text" name="facebook" placeholder="Team Member Facebook Profile URL"
+                                value="{{data.facebook}}" class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <lable>Twitter*</lable>
+                            <input type="text" name="twitter" placeholder="Team Member Twitter Profile URL"
+                                value="{{data.twitter}}" class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <lable>Linkedin*</lable>
+                            <input type="text" name="linkedin" placeholder="Team Member linkedin Profile URL"
+                                value="{{data.Linkedin}}" class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <lable>Instagram*</lable>
+                            <input type="text" name="instagram" placeholder="Team Member instagram Profile URL"
+                                value="{{data.Instagram}}" class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <lable>Youtube*</lable>
+                            <input type="text" name="youtube" placeholder="Team Member youtube Profile URL"
+                                value="{{data.youtube}}" class="form-control">
+
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <button type="submit" class="btn btn-primary w-100">Create</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{>footer}}

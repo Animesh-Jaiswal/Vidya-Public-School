@@ -1,0 +1,138 @@
+<!-- START HEADER SECTION -->
+<header class="main-header">
+  <!-- START TOP AREA -->
+  <div class="top-area">
+    <div class="auto-container">
+      <div class="row">
+        <div class="col-lg-4 col-8 text-lg-left text-center">
+          <div class="header-social">
+            <ul>
+              <li><a href="{{siteFacebook}}" target="_blank"><i class="icofont-facebook"></i></a></li>
+              {{!-- <li><a href="{{siteTwitter}}" target="_blank"><i class="icofont-twitter"></i></a></li> --}}
+              <li><a href="{{siteYoutube}}" target="_blank"><i class="icofont-youtube"></i></a></li>
+              <li><a href="{{siteInstagram}}" target="_blank"><i class="icofont-instagram"></i></a></li>
+              <li><a href="{{siteLinkedin}}" target="_blank"><i class="icofont-linkedin"></i></a></li>
+
+            </ul>
+          </div>
+        </div>
+        <!-- end col -->
+        <div class="col-lg-8 col-4 text-lg-right text-center">
+          <div class="top-menu">
+            <ul>
+              <li><a href="{{siteMap2}}" target="_blank"><i class="icofont-location-pin"></i><span
+                    class="d-none d-xl-inline">{{siteAddress}}</span></a></li>
+              <li><a href="tel:{{sitePhone}}"><i class="icofont-phone"></i><span
+                    class="d-none d-xl-inline">{{sitePhone}}</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end col -->
+      </div>
+    </div>
+  </div>
+  <!-- END TOP AREA -->
+
+  <!-- START LOGO AREA -->
+  <div class="logo-area">
+    <div class="auto-container">
+      <div class="row">
+        <div class="col-lg-3 col-5 mx-auto text-lg-left text-center pl-0 mb-lg-0 mb-4">
+          <div class="logo">
+            {{!-- <a href="/">
+              <img class="img-fluid" src="/assets/img/tl.jpg" width="200px" height="100px" alt="">
+            </a> --}}
+            <a href="/">
+              <h1>{{siteNameLogo}}</h1>
+            </a>
+          </div>
+        </div>
+        <!-- end col -->
+        <div class="col-lg-9 col-7 d-flex">
+          <div class="header-info-box">
+            <div class="header-info-icon">
+              <a href="mailto:{{siteEmail}}"><i class="icofont-envelope text-light"></i></a>
+            </div>
+            <h5 class="d-none d-xl-inline">Connect With Us</h5>
+            <p class="d-none d-xl-inline"><a href="mailto:{{siteEmail}}">{{siteEmail}}</a></p>
+          </div>
+          <div class="header-info-box">
+            <div class="header-info-icon">
+              <a href="tel:{{sitePhone}}"><i class="icofont-phone text-light"></i></a>
+            </div>
+            <h5 class="d-none d-xl-inline">Call For Inquiry</h5>
+            <p class="d-none d-xl-inline"><a href="tel:{{sitePhone}}">{{sitePhone}}</a></p>
+          </div>
+          <div class="header-info-box">
+            <div class="header-info-icon">
+              <a href="https://wa.me:{{siteWhatsApp}}"><i class="icofont-whatsapp text-light"></i></a>
+            </div>
+            <h5 class="d-none d-xl-inline">WhatsApp</h5>
+            <p class="d-none d-xl-inline"> <a href="https://wa.me:{{siteWhatsApp}}">{{siteWhatsApp}}</a></p>
+
+          </div>
+        </div>
+        <!-- end col -->
+      </div>
+    </div>
+  </div>
+  <!-- END LOGO AREA -->
+
+  <!-- START NAVIGATION AREA -->
+  <div class="sticky-menu">
+    <div class="mainmenu-area">
+      <div class="auto-container">
+        <div class="row">
+          <!-- Left Side Navigation -->
+          <div class="col-lg-9 d-none d-lg-block d-md-none">
+            <nav class="navbar navbar-expand-lg justify-content-left">
+              <ul class="navbar-nav">
+                <li class="{{isActiveClass currentUrl '/'}}"><a href="/" class="nav-link">Home</a></li>
+                <li class="{{isActiveClass currentUrl '/about'}}"><a href="/about" class="nav-link">AboutUs</a></li>
+                <li class="{{isActiveClass currentUrl '/event'}}"><a href="/event" class="nav-link">Event</a></li>
+                <li class="{{isActiveClass currentUrl '/feature'}}"><a href="/feature" class="nav-link">Features</a>
+                </li>
+
+                <li class="{{isActiveClass currentUrl '/department'}}"><a href="/department"
+                    class="nav-link">Department</a></li>
+                <li class="{{isActiveClass currentUrl '/enquiry'}}"><a href="/enquiry"
+                    class="nav-link d-block d-xl-none">Enquiry for Admission</a></li>
+                <li class="dropdown"><a class="nav-link" href="#">Other</a>
+                  <ul class="dropdown-menu">
+                    <li class="{{isActiveClass currentUrl '/faq'}}"><a href="/faq">Faq</a></li>
+                    <li class="{{isActiveClass currentUrl '/gallery'}}"><a href="/gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="{{isActiveClass currentUrl '/testimonial'}}"><a href="/testimonial">Testimonial</a></li>
+                    <li class="{{isActiveClass currentUrl '/contactus'}}"><a href="/contactus"
+                        class="nav-link">ContactUs</a>
+                    </li>
+                    <li class="{{isActiveClass currentUrl '/team'}}"><a href="/team">Team</a></li>
+                  </ul>
+                </li>
+                {{#if (isLoginHelper session)}}
+                <li class="{{isActiveClass currentUrl '/admin'}}"><a href="/admin"
+                    class="nav-link">Admin</a></li>
+                <li class="{{isActiveClass currentUrl '/admin/logout'}}"><a href="/admin/logout"
+                    class="nav-link">Logout</a></li>
+                {{else}}
+                <li class="{{isActiveClass currentUrl '/admin/login'}}"><a href="/admin/login"
+                    class="nav-link">Login</a></li>
+
+                {{/if}}
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Right Side Enquiry Button -->
+          <li>
+            <a href="/enquiry" class="nav-link text-dark btn btn-light mt-3 d-none d-xl-inline-block"><i
+                class="icofont-phone"></i>Enquiry for Admission</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END NAVIGATION AREA -->
+</header>
+<!-- END HEADER SECTION -->
